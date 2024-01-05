@@ -97,15 +97,18 @@ void handleRoot() {
     "<script>"
     "var audioCtx = new (window.AudioContext || window.webkitAudioContext)();"
     "var oscillator1, oscillator2, gainNode, lfo;"
+    "var originalFreq1, originalFreq2, maxVariance = 10, changeInterval = 5000;"
 
     "function startSound(frequency1, frequency2, pulseRate) {"
-    "  stopSound();"
+    "  stopSound();" // Reset any ongoing sounds
     "  oscillator1 = audioCtx.createOscillator();"
     "  oscillator2 = audioCtx.createOscillator();"
     "  gainNode = audioCtx.createGain();"
     "  lfo = audioCtx.createOscillator();"
     "  oscillator1.type = 'sine';"
     "  oscillator2.type = 'sine';"
+    "  originalFreq1 = frequency1;"
+    "  originalFreq2 = frequency2;"
     "  oscillator1.frequency.setValueAtTime(frequency1, audioCtx.currentTime);"
     "  oscillator2.frequency.setValueAtTime(frequency2, audioCtx.currentTime);"
     "  lfo.frequency.setValueAtTime(pulseRate, audioCtx.currentTime);"
@@ -116,6 +119,24 @@ void handleRoot() {
     "  oscillator1.start();"
     "  oscillator2.start();"
     "  lfo.start();"
+
+    // Periodically modify the frequencies slightly
+    "  setInterval(function() {"
+    "    oscillator1.frequency.setValueAtTime("
+    "      originalFreq1 + (Math.random() * 2 * maxVariance - maxVariance),"
+    "      audioCtx.currentTime"
+    "    );"
+    "    oscillator2.frequency.setValueAtTime("
+    "      originalFreq2 + (Math.random() * 2 * maxVariance - maxVariance),"
+    "      audioCtx.currentTime"
+    "    );"
+    "  }, changeInterval);"
+
+    // Periodically reset to original frequencies
+    "  setInterval(function() {"
+    "    oscillator1.frequency.setValueAtTime(originalFreq1, audioCtx.currentTime);"
+    "    oscillator2.frequency.setValueAtTime(originalFreq2, audioCtx.currentTime);"
+    "  }, changeInterval * 2);"
     "}"
 
     "function stopSound() {"
