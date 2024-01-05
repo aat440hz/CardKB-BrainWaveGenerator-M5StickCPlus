@@ -98,9 +98,10 @@ void handleRoot() {
     "var audioCtx = new (window.AudioContext || window.webkitAudioContext)();"
     "var oscillator1, oscillator2, gainNode, lfo;"
     "var originalFreq1, originalFreq2, maxVariance = 10, changeInterval = 5000;"
+    "var isPlaying = false;"
 
     "function startSound(frequency1, frequency2, pulseRate) {"
-    "  stopSound();" // Reset any ongoing sounds
+    "  stopSound();"
     "  oscillator1 = audioCtx.createOscillator();"
     "  oscillator2 = audioCtx.createOscillator();"
     "  gainNode = audioCtx.createGain();"
@@ -167,7 +168,10 @@ void handleRoot() {
     "  }"
     "}"
 
-    "var isPlaying = false;"
+    "document.addEventListener('DOMContentLoaded', function() {"
+    "  document.getElementById('playButton').click();"
+    "});"
+
     "var ws = new WebSocket('ws://' + window.location.hostname + ':81/');"
     "ws.onmessage = function(event) {"
     "  var parts = event.data.split(',');"
@@ -182,7 +186,7 @@ void handleRoot() {
     "<body>"
     "<h1>Brainwave Generator</h1>"
     "<p>Adjust the frequencies and pulse on the device.</p>"
-    "<button onclick='togglePlay()'>Play</button>"
+    "<button id='playButton' onclick='togglePlay()'>Play</button>"
     "</body>"
     "</html>";
 
