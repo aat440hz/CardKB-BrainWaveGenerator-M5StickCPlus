@@ -161,7 +161,7 @@ void handleRoot() {
     "<body>"
     "<h1>Brainwave Generator</h1>"
     "<p>Adjust the frequencies and pulse on the device.</p>"
-    "<button onclick='togglePlay()'>Play / Stop</button>"
+    "<button onclick='togglePlay()'>Play</button>"
     "</body>"
     "</html>";
 
