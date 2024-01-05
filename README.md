@@ -32,6 +32,53 @@ A project utilizing the M5StickCPlus and a CardKB keyboard to generate brainwave
 2. **Start the Sound**: Press BtnA on the M5StickCPlus to start the sound generation.
 3. **Control Sound on Web Page**: Use the "Play / Stop" button on the web page to control the sound.
 
+## Science-Based Frequency Combinations
+
+Here are some frequency combinations based on known brainwave states. These are intended for use with binaural or monaural beat generators to encourage the brain to "tune in" to a specific state.
+
+### 1. Deep Relaxation
+- **Frequency 1:** 100 Hz
+- **Frequency 2:** 104 Hz
+- **Pulse:** 4 Hz (Theta range)
+- **Explanation:** Aims for Theta range to encourage deep relaxation, meditation, and creativity.
+
+### 2. Focus and Concentration
+- **Frequency 1:** 200 Hz
+- **Frequency 2:** 215 Hz
+- **Pulse:** 15 Hz (Beta range)
+- **Explanation:** Utilizes Beta range to enhance focus, alertness, and problem-solving.
+
+### 3. Deep Sleep Induction
+- **Frequency 1:** 150 Hz
+- **Frequency 2:** 154 Hz
+- **Pulse:** 4 Hz (Delta range)
+- **Explanation:** Delta range is used to induce deep sleep or restfulness.
+
+### 4. Meditation and Mindfulness
+- **Frequency 1:** 200 Hz
+- **Frequency 2:** 210 Hz
+- **Pulse:** 10 Hz (Alpha range)
+- **Explanation:** Alpha range to aid in relaxation, calmness, and meditative states.
+
+### 5. Quick Mental Refresh
+- **Frequency 1:** 500 Hz
+- **Frequency 2:** 520 Hz
+- **Pulse:** 20 Hz (Beta range)
+- **Explanation:** Beta range for a quick mental refresh during sustained tasks.
+
+### 6. Creativity Boost
+- **Frequency 1:** 300 Hz
+- **Frequency 2:** 308 Hz
+- **Pulse:** 8 Hz (Alpha/Theta border)
+- **Explanation:** Border of Alpha and Theta for a mix of relaxation and alert awareness conducive to creativity.
+
+### Notes on Usage
+- **Range Considerations:** Actual frequencies are higher than brainwave frequencies, but the difference (pulse) is in the intended range.
+- **Volume and Duration:** Use a comfortable volume and start with shorter periods to gauge reaction.
+- **Consult Professionals:** If seeking therapeutic effects or have health concerns, consult a healthcare professional before use.
+
+Use these combinations as tools for relaxation, focus, or creativity, not as medical treatment. Individual results may vary.
+
 ## Troubleshooting
 
 - Ensure that the M5StickCPlus is charged and correctly connected to the CardKB.
