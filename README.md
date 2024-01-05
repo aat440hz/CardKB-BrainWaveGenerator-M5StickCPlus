@@ -29,8 +29,7 @@ A project utilizing the M5StickCPlus and a CardKB keyboard to generate brainwave
 ## Usage
 
 1. **Enter Frequencies and Pulse Rate**: Use the CardKB to input the desired frequencies and pulse rate.
-2. **Start the Sound**: Press BtnA on the M5StickCPlus to start the sound generation.
-3. **Control Sound on Web Page**: Use the "Play / Stop" button on the web page to control the sound.
+2. **Start the Sound**: Press BtnA on the M5StickCPlus to start the sound generation
 
 ## Science-Based Frequency Combinations
 
